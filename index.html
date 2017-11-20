@@ -197,6 +197,83 @@
 	<div class="row">
   <div class="col-md-4 col-sm-4">
     
+  </div>
+  
+    <div class="col-xs-12">
+  
+    
+    <h2 itemprop="name">
+      <a class="archive-article-title" href="/2017/11/20/너무나-쉽게-만드는-hexo-블로그-1탄-개발-환경-구축/">너무나 쉽게 만드는 hexo 블로그 [1탄-개발 환경 구축]</a>
+    </h2>
+
+
+    <ul class="blog-info">
+      <li>
+      	<i class="fa fa-calendar"></i> 
+        <time datetime="2017-11-20T14:16:53.000Z" itemprop="datePublished">2017/11/20</time>
+
+      </li>
+      <li><i class="fa fa-comments"></i>
+        <a href="http://proclaire.github.com/proclaire.github.io/2017/11/20/너무나-쉽게-만드는-hexo-블로그-1탄-개발-환경-구축/#disqus_thread" class="article-comment-link">Comments</a>
+      </li>
+      <li>
+	<i class="fa fa-tags"></i>
+	
+  
+    <a href="/tags/programming/" title="programming">programming</a>,
+  
+    <a href="/tags/linux/" title="linux">linux</a>,
+  
+    <a href="/tags/ubuntu/" title="ubuntu">ubuntu</a>,
+  
+    <a href="/tags/hexo/" title="hexo">hexo</a>
+  
+
+
+      </li>
+    </ul>
+    <div class="blog-item">
+      
+	<p>hexo 블로그 만들기 1탄. 개발환경 구축하기 </p>
+<p>hexo는 사용하기 간편한 프레임워크로 다양한 운영체제에서 사용가능하다.<br>내가 선택한 운영체제는 Linux이며, 버전은 ubuntu 64-bit이다.</p>
+<h2 id="Part1-Linux-환경-구축"><a href="#Part1-Linux-환경-구축" class="headerlink" title="Part1. Linux 환경 구축"></a>Part1. Linux 환경 구축</h2><h3 id="가상-머신-설치하기"><a href="#가상-머신-설치하기" class="headerlink" title="가상 머신 설치하기"></a>가상 머신 설치하기</h3><p>linux 운영체제를 설치하기 위해선 가상 머신이 필요하다.<br>대표적인 가상머신으로는 vmware, virtualbox 등이 있는데, 나는 virtualbox만을 써봤다.<br>아직까진 아무런 불편한 없이 매우매우 잘 사용하고 있다.</p>
+<ol>
+<li><a href="https://www.virtualbox.org/wiki/Downloads" target="_blank" rel="noopener">virtualbox download</a></li>
+<li>Windows hosts-&gt;VirtualBox-xxx-Win.exe 파일 다운로드</li>
+<li>execute 파일 실행 및 설치</li>
+</ol>
+<h3 id="우분투-다운로드"><a href="#우분투-다운로드" class="headerlink" title="우분투 다운로드"></a>우분투 다운로드</h3><p>가상 머신 설치를 완료했다면, linux-ubuntu 파일을 다운받는다.<br>linux version 중 ubuntu로 개발한다는 가정하에<br><a href="http://www.ubuntu.com/download/desktop" target="_blank" rel="noopener">utuntu 16.04.3 LTS download</a> </p>
+<h3 id="linux-시스템-구축"><a href="#linux-시스템-구축" class="headerlink" title="linux 시스템 구축"></a>linux 시스템 구축</h3><ol>
+<li>virtualbox 실행</li>
+<li>새로 만들기 클릭</li>
+<li>자신의 컴퓨터 버전과 같은 linux version 선택. ex) Linux Ubuntu 64-bit</li>
+</ol>
+<p>? ? 요즘은 대부분 64bit일텥데, 나는 왜 선택창에 linux 64bit가 없었다.<br>그 이유는,<br>두둥<br>컴퓨터 bios 설정에서 virtualize가 disabled 되어 있었기 때문!<br>&lt;해결 방법&gt;</p>
+<ul>
+<li>BIOS 설정 모드에서 Virtualization (Technology)를 Enabled로 변경.</li>
+</ul>
+<p>linux 개발 환경을 구축했다면 50%는 성공한 것</p>
+<p>짝짝짝</p>
+<h2 id="Part2-HEXO-환경-구축하기"><a href="#Part2-HEXO-환경-구축하기" class="headerlink" title="Part2. HEXO 환경 구축하기"></a>Part2. HEXO 환경 구축하기</h2><p>리눅스 개발 환경이 준비되었다면, 블로그를 위한 hexo 개발 환경을 구축해야한다.<br>이미 리눅스의 기본적인 기능들이 설치된 상태라면, hexo만을 설치하면 된다.<br>그러나, 리눅스 환경이 처음인 분들은 git, npm, nodejs 환경도 함께 구축해야한다.</p>
+<h3 id="git-설치"><a href="#git-설치" class="headerlink" title="git 설치"></a>git 설치</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt install git</span><br></pre></td></tr></table></figure>
+<h3 id="npm"><a href="#npm" class="headerlink" title="npm"></a>npm</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt install npm</span><br></pre></td></tr></table></figure>
+<h3 id="node-js"><a href="#node-js" class="headerlink" title="node.js"></a>node.js</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash - </span><br><span class="line">$ sudo apt-get install -y nodejs</span><br></pre></td></tr></table></figure>
+<h3 id="hexo"><a href="#hexo" class="headerlink" title="hexo"></a>hexo</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+<p>? ? 설치 도중 permission denied error이 발생한다면,<br>sudo 권한으로 재시도해기<br>ex) sudo npm install -g hexo-cli</p>
+
+      
+    </div>
+    <br>
+    <br>
+    <a href="http://proclaire.github.com/proclaire.github.io/2017/11/20/너무나-쉽게-만드는-hexo-블로그-1탄-개발-환경-구축/" class="more">Read more <i class="icon-angle-right"></i></a>
+  </div>
+</div>
+<hr class="blog-post-sep">
+
+      
+	<div class="row">
+  <div class="col-md-4 col-sm-4">
+    
       <img src="https://s3.amazonaws.com/ptsteadman-images/hexo.png" class="img-responsive">
     
   </div>
